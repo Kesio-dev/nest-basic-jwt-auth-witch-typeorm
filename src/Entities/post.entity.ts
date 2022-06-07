@@ -19,5 +19,5 @@ export class Post {
   points: number;
 
   @ManyToOne(() => User, user => user.posts)
-  user: User;
+  user: number;
 }

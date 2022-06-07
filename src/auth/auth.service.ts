@@ -44,5 +44,9 @@ export class AuthService {
 
         response.cookie('jwt', jwt, {httpOnly: true});
     }
+
+    verify(token) {
+        return this.jwtService.verify(token)
+    }
 }
 

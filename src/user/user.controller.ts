@@ -14,6 +14,6 @@ export class UserController {
     @Roles("ADMIN")
     @UseGuards(RolesGuard)
     getAll () {
-        return this.userRepository.find()
+        return this.userRepository.find({relations: {posts: true}})
     }
 }
